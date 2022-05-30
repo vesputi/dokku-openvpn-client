@@ -13,7 +13,7 @@ if [ ! -z "${CONFIGURE_OPENVPN}" ] ; then
     CONTAINER_IDS=$( \
         docker ps \
         --filter ancestor="dokku/${APP}:latest" \
-        --filter name="web" \
+        --filter name="worker" \
         -q \
     )
     CONFIGURE_COMMAND=""
